@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-const [chars, setChars] = useState([{}]);
+const [chars, setChars] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -27,13 +27,11 @@ const [chars, setChars] = useState([{}]);
       {chars.map(charList => {
         return (
           <CharacterCard key={charList.id}
-            name={charList.name}
-            status={charList.status}
-            species={charList.species}
+            charList={charList}
           />
         );
       })} 
-      <Link to="/"><div className="home-button">Home</div></Link>
+      <Link to='/'><div className="home-button">Home</div></Link>
     </div>
   );
 };
