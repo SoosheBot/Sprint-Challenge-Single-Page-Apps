@@ -2,12 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 
 const Card = styled.div`
-  margin-left:25px;
-  margin-right:25px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-
+  text-align:center;
   h1,h2{
     color:#DA9004;
   }

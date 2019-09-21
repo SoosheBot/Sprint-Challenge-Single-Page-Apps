@@ -5,10 +5,14 @@ const Home = styled.div`
   color:#fd8eeb;
   text-align:center;
   }
+
+  img{
+    width:80%;
+  }
 `;
 
 
-export default function HomePage(props) {
+export default function WelcomePage(props) {
 
   return (
     <div className="home-page">
@@ -17,10 +21,9 @@ export default function HomePage(props) {
         <img
           className="main-img"
           src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg"
-          alt="Rick and Morty text logo. Image courtesy Wikipedia."
+          alt="Rick and Morty text logo. Courtesy Wikipedia."
         />
       </Home>
-      
     </div>
   );
 }
