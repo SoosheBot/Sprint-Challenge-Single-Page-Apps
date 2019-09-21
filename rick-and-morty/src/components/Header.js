@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from 'styled-components';
 import { BrowserRouter as Route,Link} from 'react-router-dom';
 
 
 const Head = styled.div`
+  text-align:center;
+  h1{
+    color:#89A203;
+  }
 
-h1{
-  color:#89A203;
-}
+  a{
+    text-decoration:none;
+    color:#8e1438;
+    font-weight:bold;
+  }
 `;
 export default function Header() {
     return (

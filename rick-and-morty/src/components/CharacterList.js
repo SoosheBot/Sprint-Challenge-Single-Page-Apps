@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import CharacterCard from './CharacterCard';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default function CharacterList() {
+export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
 const [chars, setChars] = useState([]);
 
@@ -21,18 +21,19 @@ const [chars, setChars] = useState([]);
         });
   }, []);
   
+
   return (
     <div className="character-list">
       {/* <h2>TODO: `array.map()` over your state here!</h2> */}
-      {chars.map(charList => {
-        return (
-          <CharacterCard key={charList.id}
-            charList={charList}
-          />
-        );
-      })} 
-      <Link to='/'><div className="home-button">Home</div></Link>
+        {chars.map((charList,index) => {
+          return (
+            <CharacterCard key={index}
+            charList={charList} />  
+            );
+        })} 
     </div>
   );
-};
+}
+
+
 

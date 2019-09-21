@@ -9,10 +9,6 @@ const Home = styled.div`
 
 
 export default function HomePage(props) {
-  const routeToChars = event => {
-    event.preventDefault();
-    props.history.push("/characters-list");
-  };
 
   return (
     <div className="home-page">
@@ -24,7 +20,7 @@ export default function HomePage(props) {
           alt="Rick and Morty text logo. Image courtesy Wikipedia."
         />
       </Home>
-      <button onClick={routeToChars} className="characters-button">Characters</button>
+      
     </div>
   );
 }
